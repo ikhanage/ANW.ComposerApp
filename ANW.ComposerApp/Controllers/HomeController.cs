@@ -1,9 +1,15 @@
-﻿using System.Web.Mvc;
+﻿using ANW.ComposerApp.Interfaces;
+using System.Web.Mvc;
 
 namespace ANW.ComposerApp.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IComposerDetailsHelper _composerDetailsHelper;
+        public HomeController(IComposerDetailsHelper composerDetailsHelper)
+        {
+            _composerDetailsHelper = composerDetailsHelper;
+        }
         public ActionResult Index()
         {
             return View();

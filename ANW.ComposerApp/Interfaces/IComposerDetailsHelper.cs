@@ -1,12 +1,11 @@
-﻿using System;
+﻿using ANW.ComposerApp.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ANW.ComposerApp.Interfaces
 {
     public interface IComposerDetailsHelper
     {
+        IEnumerable<Composer> GetComposersNames();
+        Composer GetComposer(int id);
     }
 }
