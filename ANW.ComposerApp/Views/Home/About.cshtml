@@ -1,7 +1,7 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿@model ANW.ComposerApp.Models.Composer
 
-<p>Use this area to provide additional information.</p>
+@{
+    ViewBag.Title = "Awards!";
+}
+
+<h2 class="text-center"><small>@Model.Title</small> @Model.FirstName @Model.LastName <small>won the</small> <b>@Model.Awards</b> <small>award</small></h2>

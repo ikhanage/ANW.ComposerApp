@@ -17,9 +17,7 @@ namespace ANW.ComposerApp.Controllers
 
         public ActionResult About(int composerId)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            return View(_composerDetailsHelper.GetComposer(composerId));
         }
     }
 }
