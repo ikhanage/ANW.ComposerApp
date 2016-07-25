@@ -12,10 +12,10 @@ namespace ANW.ComposerApp.Controllers
         }
         public ActionResult Index()
         {
-            return View();
+            return View(_composerDetailsHelper.GetComposersNames());
         }
 
-        public ActionResult About()
+        public ActionResult About(int composerId)
         {
             ViewBag.Message = "Your application description page.";
 
