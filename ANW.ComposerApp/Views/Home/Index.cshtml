@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Home";
 }
+@Scripts.Render("~/Script/HomeScripts")
 
 <div class="jumbotron">
     <h1>Audionetwork</h1>
@@ -29,6 +30,12 @@
                 }
             </tbody>
         </table>
-        <b>There are @Model.Count composers being displayed</b>
+        <b id="composerCount"></b>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(function () {
+        ComposerList.SetComposerCount(@Model.Count);
+    });
+</script>
