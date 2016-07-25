@@ -5,7 +5,7 @@ namespace ANW.ComposerApp.Interfaces
 {
     public interface IComposerDetailsHelper
     {
-        IEnumerable<Composer> GetComposersNames();
+        IDictionary<int, string> GetComposersNames();
         Composer GetComposer(int id);
     }
 }

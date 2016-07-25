@@ -13,9 +13,11 @@ namespace ANW.ComposerApp.Helpers
             _dataHeleper = dataHelper;
         }
 
-        public IEnumerable<Composer> GetComposersNames()
+        public IDictionary<int, string> GetComposersNames()
         {
-            return _dataHeleper.GetComposerData();
+            var composers = _dataHeleper.GetComposerData();
+            
+            return composers.ToDictionary(x => x.Id, x => string.Format("{0} {1}", x.FirstName, x.LastName));
         }
 
         public Composer GetComposer(int id)

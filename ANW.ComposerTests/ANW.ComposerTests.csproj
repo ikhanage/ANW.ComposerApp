@@ -60,6 +60,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Helpers\ComposerDetailsHelperTests\GetComposerNamesTests.cs" />
     <Compile Include="Helpers\ComposerDetailsHelperTests\GetComposerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
